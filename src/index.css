@@ -171,31 +171,32 @@
   }
 }
 
-/* Additional utility classes for theme consistency */
-.gradient-primary {
-  background: var(--gradient-primary);
-}
+@layer components {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
 
-.gradient-secondary {
-  background: var(--gradient-secondary);
-}
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
 
-.hero-bg {
-  background: var(--hero-bg);
-}
+  .hero-bg {
+    background: var(--hero-bg);
+  }
 
-.text-hero-accent {
-  color: oklch(var(--hero-accent));
-}
+  .text-hero-accent {
+    color: oklch(var(--hero-accent));
+  }
 
-.bg-hero-accent {
-  background-color: oklch(var(--hero-accent));
-}
+  .bg-hero-accent {
+    background-color: oklch(var(--hero-accent));
+  }
 
-/* Smooth transitions for theme switching */
-.theme-transition {
-  transition: background-color 0.3s ease, color 0.3s ease,
-    border-color 0.3s ease;
+  /* Smooth transitions for theme switching */
+  .theme-transition {
+    transition: background-color 0.3s ease, color 0.3s ease,
+      border-color 0.3s ease;
+  }
 }
 
 /* Custom scrollbar theming */

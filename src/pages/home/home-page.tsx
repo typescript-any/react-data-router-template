@@ -52,7 +52,7 @@ const HomePage = () => {
 
             {/* Main Title with enhanced animation */}
             <div className="mb-12">
-              <div className="text-9xl mb-8 animate-bounce">⚛️</div>
+              <div className="text-9xl mb-8">⚛️</div>
               <div className="space-y-4">
                 <div className="inline-block px-6 py-2 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full border border-border mb-4">
                   <span className="text-primary font-medium text-lg">

@@ -2,9 +2,9 @@ import { Outlet } from "react-router";
 
 const AuthLayout = () => {
   return (
-    <div className="min-h-screen flex theme-transition">
+    <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 theme-transition">
       {/* Left side - Branding */}
-      <div className="flex-1 bg-gradient-to-br from-background via-card to-background dark:from-background dark:via-muted dark:to-card flex items-center justify-center p-8 relative overflow-hidden">
+      <div className="bg-gradient-to-br from-background via-card to-background dark:from-background dark:via-muted dark:to-card flex items-center justify-center p-8 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-10 dark:opacity-20">
           <div className="absolute top-20 left-20 w-32 h-32 bg-primary rounded-full blur-3xl"></div>
@@ -111,22 +111,8 @@ const AuthLayout = () => {
         </div>
       </div>
 
-      {/* Right side - Form/Outlet */}
-      <div className="flex-1 flex items-center justify-center p-8 bg-gradient-to-br from-background to-muted relative">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `radial-gradient(circle at 1px 1px, oklch(var(--foreground)) 1px, transparent 0)`,
-              backgroundSize: "24px 24px",
-            }}
-          ></div>
-        </div>
-
-        <div className="w-full max-w-md relative z-10">
-          <Outlet />
-        </div>
+      <div>
+        <Outlet />
       </div>
     </div>
   );
