@@ -3,15 +3,17 @@ import Layout from "../layout";
 
 import ErrorElement from "@/components/error-element";
 import NotFound from "@/components/not-found";
-import { ForbiddenPage } from "@/pages/forbidden";
 import type { RouteObject } from "react-router";
 import authRoutes from "./auth-routes";
 import MainLayout from "@/components/layout/main-layout";
 import withGuards from "@/lib/utils/with-guards";
-import { AdminPage } from "@/pages/admin";
-import { CreatePostPage } from "@/pages/create-post";
-import { HomePage } from "@/pages/home";
-import ThemeDemo from "@/components/theme-demo";
+import HomePage from "@/pages/home";
+import { withLazyLoading } from "@/lib/utils/lazy-loader";
+
+const AdminPage = withLazyLoading(() => import("@/pages/admin"));
+const CreatePostPage = withLazyLoading(() => import("@/pages/create-post"));
+const ForbiddenPage = withLazyLoading(() => import("@/pages/forbidden"));
+const ThemeDemo = withLazyLoading(() => import("@/components/theme-demo"));
 
 const routes: RouteObject[] = [
   {

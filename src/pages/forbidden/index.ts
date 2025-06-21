@@ -1,1 +1,3 @@
-export { default as ForbiddenPage } from "./forbidden-page";
+import ForbiddenPage from "./forbidden-page";
+
+export default ForbiddenPage;

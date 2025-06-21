@@ -1,1 +1,3 @@
-export { default as CreatePostPage } from "./create-post-page";
+import CreatePostPage from "./create-post-page";
+
+export default CreatePostPage;
