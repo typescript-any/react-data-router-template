@@ -1,13 +1,15 @@
 import MetaData from "@/components/meta-data";
 import { Button } from "@/components/ui/button";
-import { logout } from "@/services/api/auth-api";
-import { getCurrentUser } from "@/services/auth-service";
+import { useAuth } from "@/hooks";
 import { Link, useNavigate } from "react-router";
 
 const HomePage = () => {
-  const user = getCurrentUser();
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
-  // console.log(user);
+
+  const handleLogout = () => {
+    logout(navigate);
+  };
   return (
     <>
       <MetaData />
@@ -32,7 +34,7 @@ const HomePage = () => {
             </Link>
 
             <Button
-              onClick={() => logout(navigate)}
+              onClick={handleLogout}
               variant="destructive"
               className="mt-4"
             >

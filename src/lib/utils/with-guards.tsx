@@ -1,9 +1,8 @@
-import type { RouteGuard, RouteMode } from "@/models/route-type";
-import { getCurrentUser, hasPermission } from "@/services/auth-service";
-
+import type { RouteGuard, RouteMode } from "@/types/route-type";
 import type { ComponentType } from "react";
 import { Navigate } from "react-router";
 import { ROUTE_CONSTANTS } from "../constants";
+import { useAuth } from "@/hooks";
 
 type GuardOptions = {
   redirectPath?: string;
@@ -18,10 +17,10 @@ const withGuards = <P extends object>(
   const { mode = "private", redirectPath } = options;
 
   const GuardedRouteComponent = (props: P) => {
-    const user = getCurrentUser();
+    const { isAuthenticated, hasPermission } = useAuth();
 
     if (mode === "private") {
-      if (!user) {
+      if (!isAuthenticated) {
         return <Navigate to={ROUTE_CONSTANTS.LOGIN} />;
       }
 
@@ -30,7 +29,7 @@ const withGuards = <P extends object>(
       }
     }
 
-    if (mode === "auth" && user) {
+    if (mode === "auth" && isAuthenticated) {
       return <Navigate to={redirectPath || "/"} />;
     }
 

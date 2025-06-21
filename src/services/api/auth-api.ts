@@ -1,6 +1,6 @@
 import LOCAL_STORAGE_CONSTANTS from "@/lib/constants/local-storage-constants";
 import httpService from "../http-service";
-import type { User } from "@/models/user-type";
+import type { User } from "@/types/user-type";
 import { ROUTE_CONSTANTS } from "@/lib/constants";
 
 export const login = async (email: string, password: string) => {

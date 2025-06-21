@@ -11,9 +11,11 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { login } from "@/services/api/auth-api";
 import { useNavigate } from "react-router";
 import { ROUTE_CONSTANTS } from "@/lib/constants";
+import { useState } from "react";
+import { toast } from "sonner";
+import { useAuth } from "@/hooks";
 
 const loginSchema = z.object({
   email: z.string().email("Invalid email"),
@@ -24,6 +26,9 @@ type LoginSchema = z.infer<typeof loginSchema>;
 
 export function LoginForm() {
   const navigate = useNavigate();
+  const { login, isLoading } = useAuth();
+  const [error, setError] = useState<string | null>(null);
+
   const form = useForm<LoginSchema>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
@@ -32,13 +37,22 @@ export function LoginForm() {
     },
   });
 
-  const onSubmit = (values: LoginSchema) => {
-    console.log("Login values:", values);
-    login(values.email, values.password)
-      .then(() => {
+  const onSubmit = async (values: LoginSchema) => {
+    setError(null);
+    try {
+      const result = await login(values.email, values.password);
+      if (result.success) {
+        toast.success("Login successful");
         navigate(ROUTE_CONSTANTS.HOME);
-      })
-      .catch(() => {});
+      } else {
+        setError(result.message || "Invalid credentials");
+        toast.error(result.message || "Login failed");
+      }
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : "Login failed";
+      setError(errorMessage);
+      toast.error(errorMessage);
+    }
   };
 
   // Helper function to autofill and submit
@@ -82,8 +96,10 @@ export function LoginForm() {
           )}
         />
 
-        <Button type="submit" className="w-full">
-          Login
+        {error && <div className="text-red-500 text-sm">{error}</div>}
+
+        <Button type="submit" className="w-full" disabled={isLoading}>
+          {isLoading ? "Logging in..." : "Login"}
         </Button>
 
         <div className="flex justify-between mt-4">
@@ -91,6 +107,7 @@ export function LoginForm() {
             type="button"
             variant="outline"
             onClick={() => loginAs("user@gmail.com", "password")}
+            disabled={isLoading}
           >
             Login as User
           </Button>
@@ -98,6 +115,7 @@ export function LoginForm() {
             type="button"
             variant="outline"
             onClick={() => loginAs("admin@gmail.com", "password")}
+            disabled={isLoading}
           >
             Login as Admin
           </Button>

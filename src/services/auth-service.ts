@@ -4,7 +4,7 @@ import type {
   User,
   UserRole,
   UserScope,
-} from "@/models/user-type";
+} from "@/types/user-type";
 import { jwtDecode } from "jwt-decode";
 
 /**
