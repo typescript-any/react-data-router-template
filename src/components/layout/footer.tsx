@@ -97,7 +97,9 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://github.com/typescript-any/react-data-router-template"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-accent text-sm theme-transition flex items-center gap-2 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform">

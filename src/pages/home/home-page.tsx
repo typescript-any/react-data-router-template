@@ -81,6 +81,542 @@ const HomePage = () => {
               </span>
             </p>
 
+            {/* Getting Started Section */}
+            <div className="max-w-7xl mx-auto mb-20">
+              <div className="bg-gradient-to-br from-card/70 to-card/50 backdrop-blur-xl border border-border rounded-3xl p-12 shadow-2xl theme-transition">
+                <div className="text-center mb-16">
+                  <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full border border-border mb-8 shadow-lg">
+                    <div className="text-3xl animate-pulse">🚀</div>
+                    <h3 className="text-3xl font-bold text-foreground">
+                      Getting Started Guide
+                    </h3>
+                  </div>
+                  <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                    Transform this template into your next production-ready
+                    application.
+                    <span className="text-primary font-semibold">
+                      {" "}
+                      Follow our comprehensive guide{" "}
+                    </span>
+                    to customize, configure, and deploy your project in minutes!
+                  </p>
+                </div>
+
+                {/* Prerequisites Section */}
+                <div className="bg-gradient-to-r from-info/10 to-primary/10 rounded-2xl p-6 border border-info/20 mb-12 text-left">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="text-2xl">📋</div>
+                    <h4 className="text-xl font-bold text-foreground">
+                      Prerequisites
+                    </h4>
+                  </div>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div className="bg-background/50 rounded-lg p-3 text-center">
+                      <div className="font-semibold text-foreground">
+                        📦 Node.js
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        v18.0.0 or higher
+                      </div>
+                    </div>
+                    <div className="bg-background/50 rounded-lg p-3 text-center">
+                      <div className="font-semibold text-foreground">
+                        🐙 Git
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        Latest version
+                      </div>
+                    </div>
+                    <div className="bg-background/50 rounded-lg p-3 text-center">
+                      <div className="font-semibold text-foreground">
+                        💻 Code Editor
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        VS Code recommended
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Step-by-step Guide */}
+                <div className="grid lg:grid-cols-2 gap-10 text-left">
+                  <div className="space-y-8">
+                    {/* Step 1 */}
+                    <div className="relative">
+                      <div className="flex items-start gap-6 group">
+                        <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-all duration-300 shadow-lg">
+                          1
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-3 mb-3">
+                            <h4 className="text-xl font-bold text-foreground">
+                              Clone & Setup
+                            </h4>
+                            <div className="px-3 py-1 bg-success/20 text-success rounded-full text-xs font-medium">
+                              5 minutes
+                            </div>
+                          </div>
+                          <p className="text-muted-foreground mb-4 leading-relaxed">
+                            Get the template from GitHub and install all
+                            dependencies. Choose your preferred package manager.
+                          </p>
+                          <div className="bg-muted/50 rounded-xl p-4 border border-border">
+                            <div className="flex items-center justify-between mb-3">
+                              <span className="text-sm font-medium text-foreground">
+                                Terminal Commands:
+                              </span>
+                              <button className="text-xs px-2 py-1 bg-primary/20 text-primary rounded hover:bg-primary/30 transition-colors">
+                                Copy All
+                              </button>
+                            </div>
+                            <div className="space-y-2 text-sm font-mono text-foreground">
+                              <div className="flex items-start gap-2">
+                                <span className="text-success">$</span>
+                                <span className="break-all">
+                                  git clone
+                                  https://github.com/typescript-any/react-data-router-template.git
+                                </span>
+                              </div>
+                              <div className="flex items-center gap-2">
+                                <span className="text-success">$</span>
+                                <span>cd react-data-router-template</span>
+                              </div>
+                              <div className="flex items-center gap-2">
+                                <span className="text-success">$</span>
+                                <span>npm install</span>
+                                <span className="text-muted-foreground text-xs">
+                                  or yarn install
+                                </span>
+                              </div>
+                              <div className="flex items-center gap-2">
+                                <span className="text-success">$</span>
+                                <span>npm run dev</span>
+                                <span className="text-muted-foreground text-xs">
+                                  Start development server
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Step 2 */}
+                    <div className="relative">
+                      <div className="flex items-start gap-6 group">
+                        <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-accent to-success rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-all duration-300 shadow-lg">
+                          2
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-3 mb-3">
+                            <h4 className="text-xl font-bold text-foreground">
+                              Project Configuration
+                            </h4>
+                            <div className="px-3 py-1 bg-warning/20 text-warning rounded-full text-xs font-medium">
+                              10 minutes
+                            </div>
+                          </div>
+                          <p className="text-muted-foreground mb-4 leading-relaxed">
+                            Customize the template with your project details and
+                            branding.
+                          </p>
+                          <div className="space-y-3">
+                            <div className="bg-background/50 rounded-lg p-4 border border-border">
+                              <div className="flex items-center gap-2 mb-2">
+                                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                                <span className="font-medium text-foreground">
+                                  package.json
+                                </span>
+                              </div>
+                              <p className="text-sm text-muted-foreground">
+                                Update name, description, version, and author
+                              </p>
+                            </div>
+                            <div className="bg-background/50 rounded-lg p-4 border border-border">
+                              <div className="flex items-center gap-2 mb-2">
+                                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                                <span className="font-medium text-foreground">
+                                  src/lib/config/app-config.ts
+                                </span>
+                              </div>
+                              <p className="text-sm text-muted-foreground">
+                                Configure app title, description, and metadata
+                              </p>
+                            </div>
+                            <div className="bg-background/50 rounded-lg p-4 border border-border">
+                              <div className="flex items-center gap-2 mb-2">
+                                <div className="w-2 h-2 bg-success rounded-full"></div>
+                                <span className="font-medium text-foreground">
+                                  public/
+                                </span>
+                              </div>
+                              <p className="text-sm text-muted-foreground">
+                                Replace favicon and add your brand assets
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Step 3 */}
+                    <div className="relative">
+                      <div className="flex items-start gap-6 group">
+                        <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-success to-info rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-all duration-300 shadow-lg">
+                          3
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-3 mb-3">
+                            <h4 className="text-xl font-bold text-foreground">
+                              Authentication Setup
+                            </h4>
+                            <div className="px-3 py-1 bg-info/20 text-info rounded-full text-xs font-medium">
+                              15 minutes
+                            </div>
+                          </div>
+                          <p className="text-muted-foreground mb-4 leading-relaxed">
+                            Configure authentication and role-based access
+                            control for your app.
+                          </p>
+                          <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-4 border border-primary/20">
+                            <ul className="space-y-2 text-sm text-muted-foreground">
+                              <li className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                                Update auth service in{" "}
+                                <code className="text-primary">
+                                  src/services/auth-service.ts
+                                </code>
+                              </li>
+                              <li className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                                Modify user types in{" "}
+                                <code className="text-primary">
+                                  src/types/user-type.ts
+                                </code>
+                              </li>
+                              <li className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                                Configure role guards in{" "}
+                                <code className="text-primary">
+                                  src/lib/utils/with-guards.tsx
+                                </code>
+                              </li>
+                              <li className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                                Integrate with your backend API endpoints
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-8">
+                    {/* Step 4 */}
+                    <div className="relative">
+                      <div className="flex items-start gap-6 group">
+                        <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-info to-warning rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-all duration-300 shadow-lg">
+                          4
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-3 mb-3">
+                            <h4 className="text-xl font-bold text-foreground">
+                              Build Features
+                            </h4>
+                            <div className="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-medium">
+                              Ongoing
+                            </div>
+                          </div>
+                          <p className="text-muted-foreground mb-4 leading-relaxed">
+                            Start building your application features using the
+                            provided structure.
+                          </p>
+                          <div className="grid grid-cols-2 gap-3">
+                            <div className="bg-background/50 rounded-lg p-3 border border-border text-center">
+                              <div className="text-lg mb-1">📄</div>
+                              <div className="font-medium text-foreground text-sm">
+                                Pages
+                              </div>
+                              <div className="text-xs text-muted-foreground">
+                                src/pages/
+                              </div>
+                            </div>
+                            <div className="bg-background/50 rounded-lg p-3 border border-border text-center">
+                              <div className="text-lg mb-1">🧩</div>
+                              <div className="font-medium text-foreground text-sm">
+                                Components
+                              </div>
+                              <div className="text-xs text-muted-foreground">
+                                src/components/
+                              </div>
+                            </div>
+                            <div className="bg-background/50 rounded-lg p-3 border border-border text-center">
+                              <div className="text-lg mb-1">🔌</div>
+                              <div className="font-medium text-foreground text-sm">
+                                Services
+                              </div>
+                              <div className="text-xs text-muted-foreground">
+                                src/services/
+                              </div>
+                            </div>
+                            <div className="bg-background/50 rounded-lg p-3 border border-border text-center">
+                              <div className="text-lg mb-1">📦</div>
+                              <div className="font-medium text-foreground text-sm">
+                                State
+                              </div>
+                              <div className="text-xs text-muted-foreground">
+                                src/store/
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Step 5 */}
+                    <div className="relative">
+                      <div className="flex items-start gap-6 group">
+                        <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-warning to-destructive rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-all duration-300 shadow-lg">
+                          5
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-3 mb-3">
+                            <h4 className="text-xl font-bold text-foreground">
+                              Deploy & Launch
+                            </h4>
+                            <div className="px-3 py-1 bg-destructive/20 text-destructive rounded-full text-xs font-medium">
+                              30 minutes
+                            </div>
+                          </div>
+                          <p className="text-muted-foreground mb-4 leading-relaxed">
+                            Build your app and deploy it to your preferred
+                            hosting platform.
+                          </p>
+                          <div className="bg-muted/50 rounded-xl p-4 border border-border mb-4">
+                            <div className="flex items-center justify-between mb-3">
+                              <span className="text-sm font-medium text-foreground">
+                                Build Commands:
+                              </span>
+                            </div>
+                            <div className="space-y-2 text-sm font-mono text-foreground">
+                              <div className="flex items-center gap-2">
+                                <span className="text-success">$</span>
+                                <span>npm run build</span>
+                                <span className="text-muted-foreground text-xs">
+                                  Production build
+                                </span>
+                              </div>
+                              <div className="flex items-center gap-2">
+                                <span className="text-success">$</span>
+                                <span>npm run preview</span>
+                                <span className="text-muted-foreground text-xs">
+                                  Test production build
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="space-y-2">
+                            <div className="flex items-center gap-2 text-sm">
+                              <div className="w-1.5 h-1.5 bg-success rounded-full"></div>
+                              <span className="text-muted-foreground">
+                                Deploy to Vercel, Netlify, or AWS
+                              </span>
+                            </div>
+                            <div className="flex items-center gap-2 text-sm">
+                              <div className="w-1.5 h-1.5 bg-success rounded-full"></div>
+                              <span className="text-muted-foreground">
+                                Configure environment variables
+                              </span>
+                            </div>
+                            <div className="flex items-center gap-2 text-sm">
+                              <div className="w-1.5 h-1.5 bg-success rounded-full"></div>
+                              <span className="text-muted-foreground">
+                                Set up CI/CD pipeline with GitHub Actions
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Enhanced Pro Tips */}
+                    <div className="bg-gradient-to-br from-primary/10 via-accent/5 to-success/10 rounded-xl p-6 border border-primary/20">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="text-2xl animate-bounce">💡</div>
+                        <h5 className="text-lg font-bold text-foreground">
+                          Pro Tips & Best Practices
+                        </h5>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                          <div>
+                            <div className="font-medium text-foreground text-sm">
+                              Theme Customization
+                            </div>
+                            <div className="text-xs text-muted-foreground">
+                              Use theme toggle to test both modes and customize
+                              in tailwind.config.js
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                          <div>
+                            <div className="font-medium text-foreground text-sm">
+                              Component Library
+                            </div>
+                            <div className="text-xs text-muted-foreground">
+                              Explore shadcn/ui components in src/components/ui/
+                              for consistent design
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-success rounded-full mt-2 flex-shrink-0"></div>
+                          <div>
+                            <div className="font-medium text-foreground text-sm">
+                              RBAC Testing
+                            </div>
+                            <div className="text-xs text-muted-foreground">
+                              Test different user roles by checking protected
+                              routes and admin features
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-info rounded-full mt-2 flex-shrink-0"></div>
+                          <div>
+                            <div className="font-medium text-foreground text-sm">
+                              Performance
+                            </div>
+                            <div className="text-xs text-muted-foreground">
+                              Use lazy loading for routes and optimize bundle
+                              size with Vite
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Quick Links Section */}
+                <div className="mt-12 pt-8 border-t border-border">
+                  <div className="text-center mb-6">
+                    <h4 className="text-xl font-bold text-foreground mb-2">
+                      Quick Links & Resources
+                    </h4>
+                    <p className="text-muted-foreground">
+                      Everything you need to get the most out of this template
+                    </p>
+                  </div>
+                  <div className="grid md:grid-cols-4 gap-4 text-left">
+                    <a
+                      href="https://vitejs.dev/guide/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 p-4 bg-background/50 rounded-lg border border-border hover:bg-background/70 transition-colors group"
+                    >
+                      <div className="text-xl group-hover:scale-110 transition-transform">
+                        ⚡
+                      </div>
+                      <div>
+                        <div className="font-medium text-foreground">
+                          Vite Docs
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          Build tool guide
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="https://reactrouter.com/en/main"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 p-4 bg-background/50 rounded-lg border border-border hover:bg-background/70 transition-colors group"
+                    >
+                      <div className="text-xl group-hover:scale-110 transition-transform">
+                        🛣️
+                      </div>
+                      <div>
+                        <div className="font-medium text-foreground">
+                          React Router
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          Routing solution
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="https://ui.shadcn.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 p-4 bg-background/50 rounded-lg border border-border hover:bg-background/70 transition-colors group"
+                    >
+                      <div className="text-xl group-hover:scale-110 transition-transform">
+                        🎨
+                      </div>
+                      <div>
+                        <div className="font-medium text-foreground">
+                          shadcn/ui
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          UI components
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="https://zustand-demo.pmnd.rs/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 p-4 bg-background/50 rounded-lg border border-border hover:bg-background/70 transition-colors group"
+                    >
+                      <div className="text-xl group-hover:scale-110 transition-transform">
+                        🐻
+                      </div>
+                      <div>
+                        <div className="font-medium text-foreground">
+                          Zustand
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          State management
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+                  <a
+                    href="https://github.com/typescript-any/react-data-router-template"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground rounded-xl font-semibold transition-all shadow-lg hover:shadow-primary/25 hover:scale-105"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    View on GitHub
+                  </a>
+                  <button
+                    onClick={() => window.open("/create-post", "_self")}
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-card to-card/80 hover:from-card/90 hover:to-card/70 text-foreground border border-border rounded-xl font-semibold transition-all hover:scale-105"
+                  >
+                    <div className="text-lg">🚀</div>
+                    Try Demo Features
+                  </button>
+                </div>
+              </div>
+            </div>
+
             {/* Enhanced Features Showcase */}
             <div className="bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-xl border border-border rounded-3xl p-10 max-w-6xl mx-auto shadow-2xl theme-transition">
               <div className="flex items-center justify-center gap-3 mb-10">
