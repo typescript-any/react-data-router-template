@@ -28,15 +28,11 @@ const routes: RouteObject[] = [
         children: [
           {
             index: true, // This will be the default route when the path is "/"
-            Component: withGuards(HomePage, {
-              guard: { roles: ["admin", "user", "guest"] },
-            }),
+            Component: HomePage,
           },
           {
             path: "/theme-demo",
-            Component: withGuards(ThemeDemo, {
-              guard: { roles: ["admin", "user", "guest"] },
-            }),
+            Component: ThemeDemo,
           },
           {
             path: ROUTE_CONSTANTS.ADMIN,
