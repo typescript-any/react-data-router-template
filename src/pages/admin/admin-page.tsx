@@ -6,20 +6,26 @@ export default function AdminPage() {
   return (
     <>
       <MetaData />
-      <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
-        <div className="bg-white p-10 rounded-xl shadow-md text-center space-y-4 max-w-md">
-          <h1 className="text-3xl font-bold text-blue-600">
-            Welcome, Admin 👋
-          </h1>
-          <p className="text-gray-700">
-            You have access to the admin panel and settings.
-          </p>
-          <p className="text-sm text-gray-500">
-            Use the navigation to manage users, posts, and site settings.
-          </p>
-          <Link to="/">
-            <Button variant="link">Return to Home</Button>
-          </Link>
+      <div className="min-h-screen bg-background">
+        <div className="container mx-auto px-4 py-8">
+          {/* Header */}
+          <div className="mb-8">
+            <div className="flex items-center gap-4 mb-4">
+              <Link to="/">
+                <Button variant="outline" size="sm">
+                  ← Back
+                </Button>
+              </Link>
+              <div className="h-6 w-px bg-border"></div>
+              <h1 className="text-3xl font-bold text-primary">
+                Admin Dashboard
+              </h1>
+            </div>
+            <p className="text-muted-foreground">
+              Manage your application settings and user roles from this
+              dashboard.
+            </p>
+          </div>
         </div>
       </div>
     </>

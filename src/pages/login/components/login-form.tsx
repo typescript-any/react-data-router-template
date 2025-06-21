@@ -63,64 +63,113 @@ export function LoginForm() {
   };
 
   return (
-    <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-4 max-w-sm mx-auto mt-10"
-      >
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input placeholder="you@example.com" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
+    <div className="space-y-8">
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-foreground font-medium">
+                  Email Address
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="Enter your email"
+                    className="h-12 bg-muted/50 border-border focus:border-primary focus:ring-primary/20 theme-transition"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage className="text-destructive" />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-foreground font-medium">
+                  Password
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    type="password"
+                    placeholder="Enter your password"
+                    className="h-12 bg-muted/50 border-border focus:border-primary focus:ring-primary/20 theme-transition"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage className="text-destructive" />
+              </FormItem>
+            )}
+          />
+
+          {error && (
+            <div className="p-4 rounded-lg bg-destructive/10 border border-destructive/20">
+              <p className="text-destructive text-sm font-medium flex items-center gap-2">
+                <span className="text-destructive">⚠️</span>
+                {error}
+              </p>
+            </div>
           )}
-        />
 
-        <FormField
-          control={form.control}
-          name="password"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Password</FormLabel>
-              <FormControl>
-                <Input type="password" placeholder="••••••••" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        {error && <div className="text-red-500 text-sm">{error}</div>}
-
-        <Button type="submit" className="w-full" disabled={isLoading}>
-          {isLoading ? "Logging in..." : "Login"}
-        </Button>
-
-        <div className="flex justify-between mt-4">
           <Button
-            type="button"
-            variant="outline"
-            onClick={() => loginAs("user@gmail.com", "password")}
+            type="submit"
+            className="w-full h-12 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-semibold shadow-lg hover:shadow-xl theme-transition"
             disabled={isLoading}
           >
-            Login as User
+            {isLoading ? (
+              <>
+                <div className="animate-spin mr-2 h-4 w-4 border-2 border-primary-foreground border-t-transparent rounded-full"></div>
+                Signing in...
+              </>
+            ) : (
+              "Sign In"
+            )}
           </Button>
-          <Button
-            type="button"
-            variant="outline"
-            onClick={() => loginAs("admin@gmail.com", "password")}
-            disabled={isLoading}
-          >
-            Login as Admin
-          </Button>
-        </div>
-      </form>
-    </Form>
+
+          {/* Demo login buttons */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-2 text-muted-foreground text-sm">
+              <div className="flex-1 border-t border-border"></div>
+              <span>Quick Demo Login</span>
+              <div className="flex-1 border-t border-border"></div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => loginAs("user@gmail.com", "password")}
+                disabled={isLoading}
+                className="h-11 bg-gradient-to-r from-success/10 to-success/20 border-success/30 text-success hover:bg-success/30 theme-transition"
+              >
+                <span className="mr-2">👤</span>
+                Demo User
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => loginAs("admin@gmail.com", "password")}
+                disabled={isLoading}
+                className="h-11 bg-gradient-to-r from-warning/10 to-warning/20 border-warning/30 text-warning-foreground hover:bg-warning/30 theme-transition"
+              >
+                <span className="mr-2">👑</span>
+                Demo Admin
+              </Button>
+            </div>
+          </div>
+
+          <div className="text-center pt-4">
+            <p className="text-muted-foreground text-sm">
+              This is a demo template. Use the buttons above for quick access.
+            </p>
+          </div>
+        </form>
+      </Form>
+    </div>
   );
 }
